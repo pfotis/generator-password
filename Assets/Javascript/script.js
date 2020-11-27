@@ -7,6 +7,8 @@ var upperCaseArray = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S"
 var numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialsArray = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "=", "<", ">", "?", ";", ":", "/", "?", "|", "-", "+", "~", "`", "[", "]","{","}"];
 
+var counterType = 0;
+
 // Questions for the formula of the password
 var counter = prompt("Choose the length of your password between 8 and 128 characters ?");
 var isUpperCase = confirm("Do you want Upper Cases characters in your password ?");
@@ -27,6 +29,20 @@ while(!isLowerCase && !isUpperCase && !isNumber && !isSpecial ){
   isNumber = confirm("Do you want numeric characters in your password ?");
   isSpecial = confirm("Do you want special characters in your password ?");
 }
+// check how many differents types will include in the password
+if(isSpecial){
+  counterType++;
+}
+if(isNumber){
+  counterType++;
+}
+if(isLowerCase){
+  counterType++;
+}
+if(isUpperCase){
+  counterType++;
+}
+console.log(counterType);
 
 // Write password to the #password input
 function writePassword() {
