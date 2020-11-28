@@ -76,7 +76,25 @@ function generatePassword() {
       totalTypes=totalTypes+checkTypes;
     }
   }
-  
+  for (i=0; i<lenghtOfArray; i++){
+    if(passwordArray[i] === 0){
+      passwordArray[i]=upperCaseArray[random(upperCaseArray.length)];
+    }
+    if(passwordArray[i] === 1){
+      passwordArray[i]=upperCaseArray[random(upperCaseArray.length)].toLowerCase();
+    }
+    if(passwordArray[i] === 2){
+      passwordArray[i]=numbersArray[random(numbersArray.length)];
+    }
+    if(passwordArray[i] === 3){
+      passwordArray[i]=specialsArray[random(specialsArray.length)];
+    }
+  }
+  var keyword = passwordArray[0];
+  for (i=1; i<lenghtOfArray; i++){
+      keyword = keyword + passwordArray[i];
+  }  
+  document.getElementById("password").innerHTML = keyword;
 }
 
 
