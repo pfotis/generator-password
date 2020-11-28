@@ -8,5 +8,5 @@ There are some parameters before the password will create , the password has bet
 The following image , the user will see the first question of the setup the password and it is the lenght of the password.
 
 ![](assets/images/readme/leagth_password.png)
-
+https://github.com/pfotis/generator-password/blob/main/Assets/images/readme/leagth_password.png
 
