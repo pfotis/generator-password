@@ -1,11 +1,10 @@
 # generator-password
 
 
-## link
 
-repository :   https://github.com/pfotis/generator-password
-webpage    :   https://pfotis.github.io/generator-password/
+link of repository :   https://github.com/pfotis/generator-password
 
+link of webpage    :   https://pfotis.github.io/generator-password/
 
 
 In this project the user can create a unique password , in the begine there are question about the lenght of the passwords and which kind elements wents to include in the password.
