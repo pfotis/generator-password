@@ -3,15 +3,16 @@ var generateBtn = document.querySelector("#generate");
 
 // Questions for the formula of the password
 var lenghtOfArray = prompt("Choose the length of your password between 8 and 128 characters ?");
-var isUpperCase = confirm("Do you want Upper Cases characters in your password ?");
-var isLowerCase = confirm("Do you want Lower Cases characters in your password ?");
-var isNumber = confirm("Do you want numeric characters in your password ?");
-var isSpecial = confirm("Do you want special characters in your password ?");
 
 // in case the user give us out the range 8 and 128
 while(lenghtOfArray<8 || lenghtOfArray>128){
   lenghtOfArray = prompt("You need to choose the length of your password between 8 and 128 characters ?");
 }
+
+var isUpperCase = confirm("Do you want Upper Cases characters in your password ?");
+var isLowerCase = confirm("Do you want Lower Cases characters in your password ?");
+var isNumber = confirm("Do you want numeric characters in your password ?");
+var isSpecial = confirm("Do you want special characters in your password ?");
 
 // in case the user didnt choose any of the division of characters
 while(!isLowerCase && !isUpperCase && !isNumber && !isSpecial ){
