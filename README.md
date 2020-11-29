@@ -7,19 +7,17 @@ There are some parameters before the password will create , the password has bet
 The password will have at least one characters from all the categories the user choose.
 
 
-The following image , the user will see the first question of the setup the password and it is the lenght of the password with range between 8 to 128 characters.
-
+## The following image , the user will see the first question of the setup the password and it is the lenght of the password with range between 8 to 128 characters.
 
 <img src="./Assets/images/readme/first_look.png" alt="first impress of the generator-password">
 
-If the user will type bigger number from 128 or smaller from 8 at the end of the question the webpage will repeat the question for the length of the password, until will give an answer between the 8 and 128.
+
+### If the user will type bigger number from 128 or smaller from 8 at the end of the question the webpage will repeat the question for the length of the password, until will give an answer between the 8 and 128.
 
 <img src="./Assets/images/readme/out_of_range.png" alt="out of range characters">
 
 
-
-The following images they are the questions to help the user what kind password likes.
-
+## The following images they are the questions to help the user what kind password likes.
 
 <img src="./Assets/images/readme/upper_case.png" alt="upper case characters">
 
@@ -29,10 +27,22 @@ The following images they are the questions to help the user what kind password 
 
 <img src="./Assets/images/readme/special.png" alt="special characters">
 
-If the user didn't choose any of the categories the webpage will ask again until the user choose at least one of all the caegories.
+
+### If the user didn't choose any of the categories the webpage will ask again until the user choose at least one of all the caegories.
 
 <img src="./Assets/images/readme/none_categories.png" alt="none categories">
 
-At the final image the user will see the password . 
+
+## At the final image the user will see the password. If the user click again the button generate password , the user will see different password with the same specifications user gave in the firsts questions.
 
 <img src="./Assets/images/readme/password_print.png" alt="password">
+
+<img src="./Assets/images/readme/password_print2.png" alt="password">
+
+
+
+### Index.html & style.css
+
+index.html and style.css 
+
+<img src="./Assets/images/readme/web.png" alt="webpage">

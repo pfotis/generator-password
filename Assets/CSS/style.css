@@ -1,9 +1,11 @@
+/* reset */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* body */
 html,
 body,
 .wrapper {
@@ -23,6 +25,7 @@ body {
   padding-right: 20px;
 }
 
+/* header */
 header {
   text-align: center;
   padding: 20px;
@@ -30,6 +33,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/* card */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -72,6 +76,7 @@ header {
   clear: both;
 }
 
+/* button */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -97,6 +102,7 @@ button[disabled] {
   float: right;
 }
 
+/* container will print the password */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +124,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* style for different size of screen */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;

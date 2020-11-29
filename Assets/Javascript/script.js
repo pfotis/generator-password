@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Questions for the formula of the password
+// Question for the length of the password
 var lenghtOfArray = prompt("Choose the length of your password between 8 and 128 characters ?");
 
 // in case the user give us out the range 8 and 128
@@ -9,16 +9,17 @@ while(lenghtOfArray<8 || lenghtOfArray>128){
   lenghtOfArray = prompt("You need to choose the length of your password between 8 and 128 characters ?");
 }
 
-var isUpperCase = confirm("Do you want Upper Cases characters in your password ?");
-var isLowerCase = confirm("Do you want Lower Cases characters in your password ?");
+// Questions for the formula of the password
+var isUpperCase = confirm("Do you want Upper Case characters in your password ?");
+var isLowerCase = confirm("Do you want Lower Case characters in your password ?");
 var isNumber = confirm("Do you want numeric characters in your password ?");
 var isSpecial = confirm("Do you want special characters in your password ?");
 
 // in case the user didnt choose any of the division of characters
 while(!isLowerCase && !isUpperCase && !isNumber && !isSpecial ){
   alert("You need to answer positive at least one of the next questions and the webpage will be able to create the password :");
-  isUpperCase = confirm("Do you want Upper Cases characters in your password ?");
-  isLowerCase = confirm("Do you want Lower Cases characters in your password ?");
+  isUpperCase = confirm("Do you want Upper Case characters in your password ?");
+  isLowerCase = confirm("Do you want Lower Case characters in your password ?");
   isNumber = confirm("Do you want numeric characters in your password ?");
   isSpecial = confirm("Do you want special characters in your password ?");
 }
@@ -43,7 +44,14 @@ function generatePassword() {
     return result;
   };
 
-  // check how many differents types will include in the password
+  /* eash category represent with a number between 0 and 3 
+    The list is 
+    Upper case --> 0
+    Lower Case --> 1
+    Numeric --> 2
+    Special --> 3 
+  with the followong if the program create a array with the categories the user choose*/
+
   if(isUpperCase){
     categoriesOfKeys[counterType] = 0;
     counterType++;
@@ -61,21 +69,26 @@ function generatePassword() {
     counterType++;
   }
 
-  /* the while help to fill the password array and to check if at least 
-    we have one time each categories of the user's choices */
+  // the while loop will stop until the program check the passwordArray[] has at least one character from each category the user choose
   while (totalTypes != counterType){
+    // this for loop fill the password array with the id of the categories user choose
     for (var i=0; i<lenghtOfArray; i++){
       passwordArray[i]=categoriesOfKeys[random(counterType)]; 
     }
+    // the first for loop will run how many categories the user choose , could be max 4 or min 1 
     for ( var j=0; j<counterType; j++){
+      // the second for loop will run the whole passwordArray[] and with the if statement check at least one character of each category exist.
       for( i=0; i<lenghtOfArray; i++){
         if ( categoriesOfKeys[j] === passwordArray[i]){
           checkTypes=1;
         }
       }
+      // if the totalTypes will same with counterType the while loop will stop .
       totalTypes=totalTypes+checkTypes;
     }
   }
+  /* this for loop will start read the numbers exist in the passwordArray[] and with the help of the if statment will 
+  choose the right array to pick random character */ 
   for (i=0; i<lenghtOfArray; i++){
     if(passwordArray[i] === 0){
       passwordArray[i]=upperCaseArray[random(upperCaseArray.length)];
@@ -90,6 +103,7 @@ function generatePassword() {
       passwordArray[i]=specialsArray[random(specialsArray.length)];
     }
   }
+  // last step is the passwordArray to transfer in variable as string
   var keyword = passwordArray[0];
   for (i=1; i<lenghtOfArray; i++){
       keyword = keyword + passwordArray[i];
