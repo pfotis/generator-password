@@ -1,6 +1,22 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
+
+// with the data the user insert and the following fuction we create the password 
+function generatePassword() {
+
+  // Arrays
+  var passwordArray = new Array();
+  var categoriesOfKeys = new Array()
+  var upperCaseArray = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M"];
+  var numbersArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  var specialsArray = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "=", "<", ">", "?", ";", ":", "/", "?", "|", "-", "+", "~", "`", "[", "]","{","}"];
+
+  var counterType = 0;
+  var checkTypes =0;
+  var totalTypes = 0;
+
 // Question for the length of the password
 var lenghtOfArray = prompt("Choose the length of your password between 8 and 128 characters ?");
 
@@ -23,20 +39,6 @@ while(!isLowerCase && !isUpperCase && !isNumber && !isSpecial ){
   isNumber = confirm("Do you want numeric characters in your password ?");
   isSpecial = confirm("Do you want special characters in your password ?");
 }
-
-// with the data the user insert and the following fuction we create the password 
-function generatePassword() {
-
-  // Arrays
-  var passwordArray = new Array();
-  var categoriesOfKeys = new Array()
-  var upperCaseArray = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M"];
-  var numbersArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-  var specialsArray = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "=", "<", ">", "?", ";", ":", "/", "?", "|", "-", "+", "~", "`", "[", "]","{","}"];
-
-  var counterType = 0;
-  var checkTypes =0;
-  var totalTypes = 0;
 
   // fuction creates  random numbers
   function random(x) {

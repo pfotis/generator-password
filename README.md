@@ -13,6 +13,10 @@ There are some parameters before the password will create , the password has bet
 
 The password will have at least one characters from all the categories the user choose.
 
+### The following image , the user will click the red button "generate password"
+
+<img src="./Assets/images/readme/web.png" alt="first impress of the generator-password">
+
 
 ### The following image , the user will see the first question of the setup the password and it is the lenght of the password with range between 8 to 128 characters.
 
@@ -40,8 +44,8 @@ The password will have at least one characters from all the categories the user 
 <img src="./Assets/images/readme/none_categories.png" alt="none categories">
 
 
-### At the final image the user will see the password. If the user click again the button generate password , the user will see different password with the same specifications user gave in the firsts questions.
+### At the final image the user will see the password. 
 
 <img src="./Assets/images/readme/password_print.png" alt="password">
 
-<img src="./Assets/images/readme/password_print2.png" alt="password">
+
